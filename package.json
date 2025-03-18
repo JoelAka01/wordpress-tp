@@ -1,0 +1,20 @@
+{
+  "name": "worldpress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo && exit 1",
+    "build-css": "sass ESGI-theme/src/scss/style.scss ESGI-theme/style.css",
+    "watch-css": "sass --watch ESGI-theme/src/scss/style.scss ESGI-theme/style.css",
+    "build-js": "node esbuildonly.config.js",
+    "watch-js": "node esbuild.config.js",
+    "watch": "npm-run-all --parallel watch-js watch-css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.86.0"
+  }
+}
