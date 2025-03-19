@@ -1,5 +1,21 @@
 <?php get_header(); ?>
-<main>
 
+<main id="site-content">
+    <div class="container">
+        
+        <?php
+        $args = [
+            'post_type' => 'post',
+            'posts_per_page' => 6,
+            'orderby' => 'date',
+            'order' => 'DESC'
+        ];
+        $posts = get_posts($args);
+        ?>
+        
+        <h2>Derniers articles</h2>
+        <?php include(get_template_directory() . '/template-parts/post-list.php'); ?>
+    </div>
 </main>
+
 <?php get_footer(); ?>
