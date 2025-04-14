@@ -11,11 +11,11 @@
     }
 
     // 🎨 Mode Sombre (Défini uniquement si le système est en dark mode)
-    @media (prefers-color-scheme: dark) {
-      @each $name, $value in v.$colors-dark {
-        --#{$name}: #{$value};
-      }
-    }
+    // @media (prefers-color-scheme: dark) {
+    //   @each $name, $value in v.$colors-dark {
+    //     --#{$name}: #{$value};
+    //   }
+    // }
 
     // 🎨 Génération automatique des nuances pour light
     @each $name, $color in v.$colors {
