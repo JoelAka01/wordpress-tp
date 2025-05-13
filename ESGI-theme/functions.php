@@ -19,6 +19,9 @@ function theme_register_menus() {
 // add a logo support on the site  (for the functionnality on Wp)
 function theme_setup() {
     add_theme_support('custom-logo');
+    add_theme_support('post-thumbnails');
+
+    
 }
 add_action('after_setup_theme', 'theme_setup');
 
@@ -43,4 +46,12 @@ function getSocialLink($platform) {
 
     return $links[$platform] ?? '#';
 }
+
+// add a filtre to the_title 
+
+add_filter('the_title', 'esgi_custom_title', 10, 1); // 1  nombre de paramettre dans le fitre 
+ function esgi_custom_title($title) {
+     return '<h1 class="single-title">' . strtoupper($title) . '</h1>';
+}
+
 

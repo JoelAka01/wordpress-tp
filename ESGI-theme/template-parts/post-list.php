@@ -1,14 +1,3 @@
-        <?php
-        $args = [
-            'post_type' => 'post',
-        ];
-        $posts = get_posts($args);
-        ?>
-
-        var_dump($posts);
-<?php include(get_template_directory() . '/template-parts/post-list.php'); ?>
-
-
 <div class="post-list">
     <?php if (!empty($posts)) : ?>
 
